@@ -118,8 +118,13 @@ header{
 }
 
 .curso{
+    padding: 10px;
     background-color: rgb(10, 157, 150);
     box-shadow: 7px 7px 10px 0px rgb(5 95 91);
+}
+.img-curso{
+    width: 80%;
+    margin: 0 auto;
 }
 .nome-curso{
     font-size: 1.25em;
