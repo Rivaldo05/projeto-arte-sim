@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.disfarce{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.cor{
+    background-color: rgb(6, 127, 125);
+}
+
+:root{
+    --text-branco:rgb(240, 248, 255);
+}
+p{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.25em;
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2{
+    font-size: 2em;
+    text-align: center;
+}
+header{
+    background-color: rgb(6, 127, 125);
+    width: 100vw;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#conteiner-logo > h1 {
+    color: var(--text-branco);
+}
+#logo{
+    margin: 0 auto;
+    width: 100px;
+}
+#menu-mobile{
+    display: none;
+}
+#lista-menu{
+    display: flex;
+    justify-content: space-between;
+}
+#lista-menu > li > a {
+    padding: 10px;
+    font-size: 1.25em;
+    color: var(--text-branco);
+    transition: .5s;
+}
+#lista-menu > li > a:hover{
+    background-color: rgb(2, 75, 74);
+
+}
+.banner{
+    height: 500px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: aqua;
+    background-image: url('../imagens/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.banner > *{
+    z-index: 2;
+    color: var(--text-branco);
+}
+.banner > h2{
+    font-size: 3em;
+}
+
+.banner-disfarce{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+@supports (backdrop-filter: blur(3px)){
+    .banner-disfarce{
+        backdrop-filter: blur(3px);
+    }
+}
+
+.grid-cursos{
+    margin: 20px auto;
+    padding: 0 10px;
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    gap: 30px;
+    justify-content: center;
+}
+
+.curso{
+    background-color: rgb(10, 157, 150);
+    box-shadow: 7px 7px 10px 0px rgb(5 95 91);
+}
+.nome-curso{
+    font-size: 1.25em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.button-base{
+    transition: .5s;
+    display: block;
+    background-color: rgb(5 95 91);
+    border: none;
+    border-radius: 15px;
+    margin: 0 auto;
+    font-size: 1.25em;
+}
+.button-base:hover{
+    background-color: rgb(10, 167, 159);
+
+}
+.button-base:hover > a{
+    color: rgb(0, 0, 0);
+}
+.button-base > a{
+    display: block;
+    padding: 10px;
+    color: var(--text-branco);
+}
+@media screen  and (max-width:800px) {
+    #lista-menu{
+        display: none;
+    }
+
+}
+
