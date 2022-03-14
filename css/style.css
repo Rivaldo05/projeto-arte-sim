@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.4em;
 }
 
@@ -16,19 +19,22 @@
     height: 100%;
     position: absolute;
 }
-.cor{
-    background-color: rgb(6, 127, 125);
-}
 
 :root{
     --text-branco:rgb(240, 248, 255);
+    --cor-card: rgb(3, 168, 160);
 }
 p{
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     font-size: 1.25em;
     text-align: center;
+    padding: 0 10px;
+}
+span{
+    font-size: 1.25em;
+    padding: 0px 10px;
 }
 img{
     width: 100%;
@@ -38,22 +44,27 @@ img{
 h1, h2{
     font-size: 2em;
     text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
 }
 header{
     background-color: rgb(6, 127, 125);
     width: 100vw;
-    padding: 20px 10px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 #conteiner-logo > h1 {
+    margin: 10px 0;
     color: var(--text-branco);
+    font-weight: 500;
+    font-family: 'Alice';
 }
 #logo{
     margin: 0 auto;
-    width: 100px;
+    width: 80px;
 }
 #menu-mobile{
     display: none;
@@ -73,30 +84,36 @@ header{
 
 }
 .banner{
-    height: 500px;
-    width: 80%;
+    width: 100%;
     max-width: 1000px;
     margin: 30px auto;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     background-color: aqua;
-    background-image: url('../imagens/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     position: relative;
+}
+.banner-forma1{
+    height: 500px;
+    background-image: url('../imagens/banner.jpg');
+}
+.banner-forma2{
+    height: 300px;
+    background-image: url('../imagens/banner2.jpg');
 }
 .banner > *{
     z-index: 2;
     color: var(--text-branco);
 }
 .banner > h2{
-    font-size: 3em;
+    text-transform: uppercase;
 }
-
 .banner-disfarce{
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -116,17 +133,21 @@ header{
     gap: 30px;
     justify-content: center;
 }
-
+.curso-fracao{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 475px));
+}
 .curso{
     padding: 10px;
-    background-color: rgb(10, 157, 150);
+    background-color: var(--cor-card);
     box-shadow: 7px 7px 10px 0px rgb(5 95 91);
 }
+
 .img-curso{
     width: 80%;
     margin: 0 auto;
 }
 .nome-curso{
+    font-family: 'alice';
     font-size: 1.25em;
     text-align: center;
     text-transform: uppercase;
@@ -136,15 +157,14 @@ header{
 .button-base{
     transition: .5s;
     display: block;
-    background-color: rgb(5 95 91);
+    background-color: rgb(5, 95, 91);
     border: none;
     border-radius: 15px;
-    margin: 0 auto;
+    margin: 20px auto;
     font-size: 1.25em;
 }
 .button-base:hover{
     background-color: rgb(10, 167, 159);
-
 }
 .button-base:hover > a{
     color: rgb(0, 0, 0);
@@ -154,10 +174,34 @@ header{
     padding: 10px;
     color: var(--text-branco);
 }
+
+footer{
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgb(5, 95, 91);
+}
+#footer-span{
+    display: block;
+    font-size: 1.25em;
+    padding: 0 10px;
+    text-align: center;
+}
+#footer-conteiner{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-footer{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
 @media screen  and (max-width:800px) {
     #lista-menu{
         display: none;
     }
-
 }
 
