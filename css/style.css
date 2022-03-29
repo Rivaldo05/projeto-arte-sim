@@ -23,6 +23,8 @@
 :root{
     --text-branco:rgb(240, 248, 255);
     --cor-card: rgb(3, 168, 160);
+    --cor-header:rgb(6, 127, 125);
+    --Cor-menuMobile: rgb(202, 198, 73);
 }
 p{
     width: 100%;
@@ -48,7 +50,7 @@ h1, h2{
     margin-top: 50px;
 }
 header{
-    background-color: rgb(6, 127, 125);
+    background-color: var(--cor-header);
     width: 100vw;
     padding: 10px;
     display: flex;
@@ -68,6 +70,34 @@ header{
 }
 #menu-mobile{
     display: none;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
+#hamburguer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: var(--Cor-menuMobile);
+    border-radius: 4px;
+    cursor: pointer;
+}
+#hamburguer::after, #hamburguer::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--Cor-menuMobile);
+    border-radius: 4px;
+    top: -7px;
+    transition: .5s;
+}
+#hamburguer::before{
+    top: 7px;
 }
 #lista-menu{
     display: flex;
@@ -143,7 +173,8 @@ header{
 }
 
 .img-curso{
-    width: 80%;
+    width: 50%;
+    min-width: 100px;
     margin: 0 auto;
 }
 .nome-curso{
@@ -202,6 +233,32 @@ footer{
 @media screen  and (max-width:800px) {
     #lista-menu{
         display: none;
+    }
+    #menu-mobile{
+        display: block;
+    }
+    .active > #lista-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        z-index: 1000;
+        top:170px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 170px);
+        background-color: var(--cor-header);
+    }
+    .active > #menu-mobile > #hamburguer{
+        background-color: transparent;
+    }
+    .active > #menu-mobile > #hamburguer::after{
+        top:0;
+        transform: rotate(230deg);
+    }
+    .active > #menu-mobile > #hamburguer::before{
+        top:0;
+        transform: rotate(-230deg);
     }
 }
 
