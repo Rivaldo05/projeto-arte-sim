@@ -52,6 +52,7 @@ h1, h2{
 header{
     background-color: var(--cor-header);
     width: 100vw;
+    height: 170px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
