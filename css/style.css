@@ -18,6 +18,22 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+}
+.grid-autofit{
+    margin: 20px auto;
+    padding: 0 10px;
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    gap: 30px;
+    justify-content: center;
+}
+.grid-fracao{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 475px));
 }
 
 :root{
@@ -129,14 +145,20 @@ header{
     background-position: center;
     background-attachment: fixed;
     position: relative;
+    height: 500px;
 }
 .banner-forma1{
-    height: 500px;
     background-image: url('../imagens/banner.jpg');
 }
 .banner-forma2{
     height: 300px;
     background-image: url('../imagens/banner2.jpg');
+}
+.banner-parceiros{
+    background-image: url('https://www.npportoes.com.br/wp-content/uploads/2018/03/parceiros.jpg');
+}
+.banner-voluntario{
+    background-image: url('https://aquietrabalho.com/wp-content/uploads/2020/02/voluntariado.jpg');
 }
 .banner > *{
     z-index: 2;
@@ -154,19 +176,6 @@ header{
     }
 }
 
-.grid-cursos{
-    margin: 20px auto;
-    padding: 0 10px;
-    width: 100%;
-    max-width: 1000px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
-    gap: 30px;
-    justify-content: center;
-}
-.curso-fracao{
-    grid-template-columns: repeat(auto-fit, minmax(200px, 475px));
-}
 .curso{
     padding: 10px;
     background-color: var(--cor-card);
@@ -231,6 +240,13 @@ footer{
     height: 50px;
     padding: 10px;
 }
+
+.parceiro{
+    padding: 10px;
+    background-color: var(--cor-card);
+    position: relative;
+}
+
 @media screen  and (max-width:800px) {
     #lista-menu{
         display: none;
