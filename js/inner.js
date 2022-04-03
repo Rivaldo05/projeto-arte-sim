@@ -1,10 +1,15 @@
 const select = (e) => document.getElementById(e)
+const imgLogo =''
+const imgLogFacebookFooter =''
+const imgLogoInstagramFooter =''
+const imgLogoEmailFooter =''
+
 
 const header = select('header')
 const headerIner = `
         <div id="conteiner-logo">
             <div id="logo">
-                <img src="../imagens/logo.png" alt="logo do Projeto Arte Sim">
+                <img src="${imgLogo}" alt="logo do Projeto Arte Sim">
             </div>
             <h1>Projeto Arte Sim!</h1>
         </div>
@@ -30,13 +35,13 @@ const footerIner = `
         <span id="footer-span">Clique no ícones abaixo para mais informações</span>
         <div id="footer-conteiner">
             <div class="img-footer"><a href="https://www.facebook.com/projetoartesim/about" target="_blank" rel="noopener noreferrer">
-                <img src="../imagens/facebook.png" alt="Logo do facebook">
+                <img src="${imgLogFacebookFooter} alt="Logo do facebook">
             </a></div>
             <div class="img-footer"><a href="https://www.instagram.com/projeto_artesim/?igshid=671xjn5v2i25" target="_blank" rel="noopener noreferrer">
-                <img src="../imagens/instagram.png" alt="Logo do instagram">
+                <img src="${imgLogoInstagramFooter}" alt="Logo do instagram">
             </a></div>
             <div class="img-footer"><a href="mailto:projetoartesim@gmail.com" target="_blank" rel="noopener noreferrer">
-                <img src="../imagens/o-email.png" alt="Logo do email">
+                <img src="${imgLogoEmailFooter} alt="Logo do email">
             </a></div>
         </div>
 `
