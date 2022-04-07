@@ -169,6 +169,7 @@ header{
     z-index: 2;
     margin: 0;
     color: var(--text-branco);
+    text-align: center;
 }
 .banner > h2{
     text-transform: uppercase;
@@ -282,6 +283,7 @@ footer{
 @media screen  and (max-width:800px) {
     p{
         font-size: 1em;
+        text-align: left;
     }
     #lista-menu{
         display: none;
